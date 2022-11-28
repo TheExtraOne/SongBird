@@ -1,0 +1,705 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  cursor: default;
+}
+.body {
+  background-color: rgb(252, 246, 239);
+}
+/*Header*/
+.header {
+  height: 80px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__container {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.header__logo {
+  cursor: pointer;
+  border: solid white 5px;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.header__logo-frase {
+  font-family: 'Pacifico', cursive;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+.header__logo-frase_green,
+.header__nav-link:hover,
+.header__language_active,
+.header__language:hover {
+  color: #4fab8f;
+}
+.header__nav-list {
+  list-style: none;
+}
+.header__nav-item {
+  display: inline-block;
+  margin: 0px 90px;
+  font-size: 21px;
+}
+.header__nav-link {
+  cursor: pointer;
+  color: white;
+  transition: all .1s ease-in-out;
+}
+.header__nav-link_active {
+  color: #4fab8f;
+}
+.header__language {
+  cursor: pointer;
+  padding: 5px;
+  transition: all .1s ease-in-out;
+}
+.header__burger-menu {
+  display: none;
+}
+/*Popup*/
+.popup {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  overflow: hidden;
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup_invis {
+  display: none;
+}
+.popup__content {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #000;
+}
+.popup__nav-list {
+  list-style: none;
+}
+.popup-item {
+  font-size: 25px;
+  margin: 30px 10px;
+  text-align: center;
+}
+.popup__link:hover,
+.popup__close:hover {
+  color: #4fab8f;
+}
+.popup__link {
+  cursor: pointer;
+  color: black;
+  transition: all .1s ease-in-out;
+}
+.popup__link_active {
+  color: #4fab8f;
+}
+.popup__close {
+  position: absolute;
+  top: 5px;
+  right: 13px;
+  cursor: pointer;
+  font-size: 30px;
+  transition: all .1s ease-in-out;
+}
+@media screen and (max-width: 1240px){
+  .header__nav-item {
+    margin: 0px 60px;
+  }
+}
+@media screen and (max-width: 1000px){
+  .header__nav-item {
+    margin: 0px 40px;
+  }
+}
+@media screen and (max-width: 780px){
+  .header {
+    position: fixed;
+    z-index: 10;
+  }
+  .header__container {
+    width: 100vw;
+  }
+  .header__nav-list,
+  .header__languages {
+    display: none;
+  }
+  .header__burger-menu {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0px 10px;
+    width: 30px;
+    height: auto;
+  }
+}
+/*Banner*/
+.main-banner {
+  min-height: 750px;
+  background: url(assets/images/bird.jpg) 100% 0% no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+.main-banner__text-container {
+  position: absolute;
+  top: 160px;
+  left: 156px;
+  font-size: 65px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  line-height: 88px;
+  font-weight: bold;
+  width: 608px;
+}
+/*button*/
+.button {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  padding-right: 40px;
+  position: absolute;
+  bottom: 94px;
+  left: 156px;
+}
+.button:hover .button__border-circle { 
+  transform: translateX(60px);
+}
+.button:hover .button__mask-circle {
+  clip-path: circle(25px at 85px);
+}
+.button__text {
+  z-index: 1;
+  font-size: 23px;
+  margin-right: -18px;
+  letter-spacing: 0.05em;
+}
+.button__link {
+  color: black;
+  cursor: pointer;
+}
+.button__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.button__arrow {
+  left: 35px;
+  height: 3px;
+  width: 50px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  background-color: black;
+}
+.button__arrow:after {
+  content: '';
+  width: 0; 
+  height: 0; 
+  top: -5px;
+  right: -7px;
+  position: absolute;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid black;
+}
+.button__border-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid #4fab8f;
+  transition: transform 987ms;
+}
+
+.button__mask-circle {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: circle(25px);
+  transition: clip-path 987ms;
+}
+
+.button__small-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translateX(60px);
+  background-color: black;
+}
+@media screen and (max-width: 780px) {
+  .main-banner {
+    min-height: 650px;
+    background: url(assets/images/bird.jpg) 68% 55% / 150% no-repeat fixed;
+  }
+  .main-banner__text-container {
+    top: 223px;
+    font-size: 56px;
+    letter-spacing: 6px;
+    line-height: 83px;
+    width: 450px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-banner {
+    min-height: 500px;
+    background: url(assets/images/bird.jpg) 68% 33% / 163% no-repeat fixed;
+  }
+  .main-banner__text-container {
+    top: 217px;
+    left: 45px;
+    font-size: 40px;
+    letter-spacing: 3px;
+    line-height: 48px;
+    width: 301px;
+  }
+  .button {
+    bottom: 61px;
+    left: 46px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .main-banner {
+    min-height: 450px;
+    background: url(assets/images/bird.jpg) 68% 20% / 179% no-repeat fixed;
+  }
+  .main-banner__text-container {
+    top: 208px;
+    left: 30px;
+    font-size: 36px;
+    letter-spacing: 3px;
+    line-height: 41px;
+    width: 274px;
+  }
+  .button {
+    bottom: 40px;
+    left: 31px;
+  }
+}
+/*about section*/
+.about {
+  width: 100%;
+  min-height: 600px;
+  background: url(assets/images/birds_PNG57.png) 15% 62% no-repeat;
+  background-size: 30%;
+  overflow: hidden;
+  position: relative;
+}
+.about__container {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 500px;
+}
+.about__title {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 20px 0px 40px 0px;
+  color: #4fab8f;
+}
+.about__text {
+  font-size: 17px;
+  margin: 10px 0px 20px 0px;
+}
+.about__list {
+  list-style: none;
+}
+.about__item {
+  display: inline-block;
+  margin: 10px;
+}
+.about__item a {
+  cursor: pointer;
+}
+.about__item a img {
+  width: 55px;
+  height: auto;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.about__item a img:hover {
+  transform: scale(1.1);
+  transition: all .3s ease-in-out;
+}
+@media screen and (max-width: 1020px) {
+  .about {
+    min-height: 500px;
+    background: url(assets/images/birds_PNG57.png) 6% 62% no-repeat;
+    background-size: 36%;
+  }
+  .about__container {
+    top: 9%;
+    left: 40%;
+    width: 480px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .about__container {
+    top: 9%;
+    left: 45%;
+    width: 360px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .about {
+    min-height: 420px;
+    background: url(assets/images/birds_PNG57.png) 6% 45% no-repeat;
+    background-size: 31%;
+  }
+  .about__container {
+    top: 9%;
+    left: 37%;
+  }
+  .about__title {
+    font-size: 25px;
+    text-transform: uppercase;
+    margin: 0px 0px 10px 0px;
+    color: #4fab8f;
+  }
+}
+@media screen and (max-width: 590px) {
+  .about {
+    min-height: 420px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .about__container {
+    position: static;
+  }
+}
+@media screen and (max-width: 400px) {
+  .about__title {
+    font-size: 28px;
+    margin: 0px 0px 17px 0px;
+  }
+  .about__text {
+    font-size: 15px;
+  }
+  .about__item {
+    margin: 5px;
+  }
+}
+/*quizz section*/
+.quizz {
+  min-height: 750px;
+  background: url(assets/images/owl2.jpg) 100% 0% no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+/*button*/
+.quizz .button {
+  bottom: 50%;
+  left: 38%;
+}
+.quizz .button__link {
+  color: white;
+}
+.quizz  .button__arrow {
+  background-color: white;
+}
+.quizz .button__arrow:after {
+  border-left: 7px solid white;
+}
+.quizz .button__border-circle {
+  border: 3px solid #4fab8f;
+}
+.quizz .button__small-circle {
+  background-color: white;
+}
+@media screen and (max-width: 1020px) {
+  .quizz {
+    min-height: 650px;
+    background: url(assets/images/owl2.jpg) 50% 0% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+@media screen and (max-width: 920px) {
+  .quizz {
+    min-height: 400px;
+    background: url(assets/images/owl2.jpg) 50% 0% no-repeat;
+    background-size: 150%;
+    background-attachment: fixed;
+  }
+  .quizz .button {
+    bottom: 46%;
+    left: 21%;
+  }
+}
+@media screen and (max-width: 740px) {
+  .quizz {
+    background: url(assets/images/owl2.jpg) 66% 0% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+@media screen and (max-width: 470px) {
+  .quizz .button {
+    bottom: 46%;
+    left: 5%;
+  }
+}
+/* .quizz__button-wrapper {
+  height: 33.33%;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 270px;
+}
+.quizz__button {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+  color: #FFF;
+  transition: all 0.3s;
+  position: relative;
+}
+.quizz__link {
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: white;
+  transition: all 0.3s;
+}
+.quizz__button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,255,255,0.5);
+  border-bottom-color: rgba(255,255,255,0.5);
+  transform: scale(0.1, 1);
+}
+.quizz__button:hover .quizz__link {
+  letter-spacing: 2px;
+}
+.quizz__button:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+.quizz__button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+}
+.quizz__button:hover::after {
+  opacity: 0; 
+  transform: scale(0.1, 1); 
+}*/
+
+/*partners section*/
+.partners {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background: url(assets/images/birds_PNG89.png) 12% -25% no-repeat;
+  background-size: 54%;
+  position: relative;
+  overflow: hidden;
+}
+.partners__title {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 60px 0px 10px 0px;
+  text-align: center;
+  color: #4fab8f;
+}
+.partners__wrapper {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.partner__column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  margin: 0px 20px;
+}
+.parnter__name {
+  text-align: center;
+  height: 70px;
+  font-size: 21px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 50px 0px 25px 0px;
+}
+.parter__info {
+  padding: 5px;
+  height: 200px;
+}
+.parter__link {
+  color: black;
+  cursor: pointer;
+  margin: 30px 0px 60px 0px;
+  font-weight: bold;
+  transition: all .3s ease-in-out;
+}
+.parter__link:hover {
+  color: #4fab8f;
+}
+.parter__link:hover {
+  transform: scale(1.1);
+  transition: all .3s ease-in-out;
+}
+@media screen and (max-width: 1214px) {
+  .partners {
+    background: url(assets/images/birds_PNG89.png) 12% 0% no-repeat, url(assets/images/birds_PNG89.png) 100% 94% no-repeat;
+    background-size: 62%;
+    position: relative;
+  }
+  .partners__wrapper {
+    max-width: 865px;
+  }
+  .partner__column {
+    width: 290px;
+    margin: 0px 38px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .partners__title {
+    font-size: 30px;
+    margin: 10px 0px 10px 0px;
+  }
+  .parnter__name {
+    font-size: 21px;
+    margin: 10px 0px 6px 0px;
+  }
+}
+@media screen and (max-width: 787px) {
+  .partner__column {
+    width: 240px;
+    margin: 0px 20px;
+  }
+  .partners {
+    background-size: 80%;
+  }
+}
+@media screen and (max-width: 614px) {
+  .partner__column {
+    width: 320px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .partners__title {
+    font-size: 25px;
+  }
+  .parnter__name {
+    font-size: 19px;
+    height: 64px;
+    margin: 10px 0px 6px 0px;
+  }
+  .parter__link {
+    margin: 9px 0px 30px 0px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .partners {
+    background: url(assets/images/birds_PNG89.png) 12% 10% no-repeat, url(assets/images/birds_PNG89.png) 86% 79% no-repeat;
+    background-size: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .parter__info {
+    font-size: 15px;
+    height: 180px;
+  }
+  .partners {
+    background: url(assets/images/birds_PNG89.png) 8% 20% no-repeat, url(assets/images/birds_PNG89.png) 86% 79% no-repeat;
+  }
+}
+
+/*Footer*/
+.footer {
+  height: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.footer__git {
+  cursor: pointer;
+  color: white;
+  transition: all .3s ease-in-out;
+}
+.footer__git:hover {
+  color: #4fab8f;
+}
+.footer__referen {
+  background-color: #4fab8f;
+  padding: 5px;
+}
+.footer__logo-school {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+@media screen and (max-width: 520px) {
+  .footer {
+    height: 80px;
+    padding: 20px;
+  }
+  .footer__logo-school {
+    width: 77px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 420px) {
+  .footer__git {
+    font-size: 13px;
+  }
+  .footer__logo-school {
+    width: 65px;
+    height: auto;
+  }
+}

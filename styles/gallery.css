@@ -1,0 +1,109 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	cursor: default;
+}
+.body {
+	background-color: rgb(252, 246, 239);
+}
+.gallery {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.gallery__container {
+	width: 1200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.gallery__card-container {
+	max-width: 570px;
+	height: 290px;
+	border: solid #e3e3e3 1px;
+	border-radius: 10px;
+	box-shadow: #c3c2c4 0px 0px 15px 0px;
+	margin: 20px 10px;
+	padding: 10px;
+	transition: all 0.3s ease-in-out;
+}
+.gallery__card-container:hover {
+	transform: scale(1.03);
+}
+.gallery__img-container {
+	max-width: 40%;
+	float: left;
+	margin-top: 15px;
+}
+.gallery__img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+.gallery__bird-name {
+	padding-left: 43%;
+}
+.gallery__bird-name-lat {
+	padding-left: 43%;
+	margin: 5px 0px;
+	font-style: italic;
+}
+.gallery__bird-info {
+	padding-left: 43%;
+	margin-bottom: 5px;
+}
+audio {
+	clear: both;
+	width: 100%;
+}
+@media screen and (max-width: 1130px) {
+	.gallery__img-container {
+		margin-top: 25px;
+	}
+}
+@media screen and (max-width: 1130px) {
+	.gallery__container {
+		flex-wrap: wrap;
+	}
+}
+@media screen and (max-width: 780px) {
+	.gallery {
+		padding-top: 80px;
+	}
+}
+@media screen and (max-width: 570px) {
+	.gallery__img-container {
+		margin-top: 35px;
+	}
+	.gallery__card-container {
+		height: auto;
+	}
+	.gallery__bird-info {
+		font-size: 15px;
+	}
+}
+@media screen and (max-width: 470px) {
+	.gallery__card-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.gallery__img-container {
+		float: none;
+		max-width: 50%;
+		margin: 12px 0px 10px 0px;
+	}
+	.gallery__bird-name,
+	.gallery__bird-name-lat,
+	.gallery__bird-info {
+		padding-left: 0;
+	}
+	.audio-container {
+		width: 100%;
+	}
+}

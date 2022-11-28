@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>SongBird</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		<meta name="HandheldFriendly" content="True"><!--В некоторых случаях смартфоны автоматически изменяют масштаб страницы, лучше эту возможность отключать-->
+		<!-- saved from url=(0014)about:internet -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--Чтобы переключить Internet Explorer в режим последней версии --> 
+		<meta http-equiv="cleartype" content="on"><!--Для включения сглаживания шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" 
+      rel="stylesheet">
+    <link rel="icon" href="../assets/icons/favicon.ico">
+		<link rel="stylesheet" href="../styles/header-footer.css">
+    <link rel="stylesheet" href="../styles/player.css">
+    <link rel="stylesheet" href="../styles/quiz.css">
+	</head>
+	<body class="body">
+    <header class="header">
+      <div class="header__container">
+        <a href="../index.html" class="header__logo">
+          <span class="header__logo-frase">Song</span><span class="header__logo-frase header__logo-frase_green">bird</span>
+        </a>
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="../index.html" class="header__nav-link header__nav-link_header-main">Главная</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link header__nav-link_active header__nav-link_header-quiz">Викторина</a></li>
+          <li class="header__nav-item"><a href="gallery.html" class="header__nav-link header__nav-link_header-gal">Галерея</a></li>
+        </ul>
+        <div class="header__languages">
+          <span class="header__language header__language_active Ru">Ru </span> /
+          <span class="header__language Eng"> Eng</span>
+        </div>
+        <img src="../assets/icons/burger_menu.svg" alt="burger menu" class="header__burger-menu">
+      </div>
+    </header>
+    <section class="popup popup_invis">
+      <div class="popup__content">
+        <ul class="popup__nav-list">
+          <li class="popup-item"><a href="../index.html" class="popup__link header__nav-link_pop-main">Главная</a></li>
+          <li class="popup-item"><a href="#" class="popup__link popup__link_active header__nav-link_pop-quiz">Викторина</a></li>
+          <li class="popup-item"><a href="gallery.html" class="popup__link header__nav-link_pop-gal">Галерея</a></li>
+          <li class="popup-item">
+            <span class="header__language header__language_active Ru">Ru </span> /
+            <span class="header__language Eng"> Eng</span>
+          </li>
+        </ul>
+        <span class="popup__close">X</span>
+      </div>
+    </section>
+    <section class="questions-section">
+      <div class="wrapper-section">
+        <div class="questions-section__top">
+          <p class="questions-section__logo-wrapper">
+            <span class="questions-section__logo">Song</span><span class="questions-section__logo questions-section__logo_green">bird</span>
+          </p>
+          <p class="questions-section__score-wrapper">
+            Score:
+            <span class="questions-section__score">0</span>
+          </p>
+        </div>
+        <div class="questions-section__bottom">
+          <p class="question-section__question question-section__question-1 question-section__question_left-corner">Разминка</p>
+          <p class="question-section__question question-section__question-2">Воробьиные</p>
+          <p class="question-section__question question-section__question-3">Лесные птицы</p>
+          <p class="question-section__question question-section__question-4">Певчие птицы</p>
+          <p class="question-section__question question-section__question-5">Хищные птицы</p>
+          <p class="question-section__question question-section__question-6 question-section__question_right-corner">Морские птицы</p>
+        </div>
+      </div>
+    </section>
+    <section class="current-question-section">
+      <div class="wrapper-section wrapper-section_grey">
+        <div class="current-question__bird"></div>
+        <div class="current-question__wrapper-aud">
+          <p class="current-question__bird-name">******</p>
+          <!-- <audio src="#" class="custom-audio" controls></audio> -->
+          <div class="audio-container">
+            <audio src='#' class="custom-audio"></audio>
+            <div class ="controls">
+              <button class="controls__play">
+                <img src="../assets/icons/play.svg" alt="" class="controls__play-img">
+              </button>
+              <div class="controls__audio-length">
+                <div class="controls__played-time">
+                  <span class="controls__point"></span>
+                </div>
+                <span class="current-time">00:00</span>
+                <span class="duration">00:00</span>
+              </div>
+              <div class="controls__volume">
+                <input type="range" min="0" max="1" value="0.5" step="0.1" class="controls__range controls__range_invis">
+                <img src="../assets/icons/volume.svg" alt="" class="controls__volume-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="answers-section">
+      <div class="wrapper-section wrapper-section_white">
+        <div class="answer-section__bird-list">
+          <!-- <div class="answer-section_bird">
+            <span class="answer-section__point"></span>
+            <span class="answer-section_bird-name">Воробей</span>
+          </div>
+          <div class="answer-section_bird">
+            <span class="answer-section__point"></span>
+            <span class="answer-section_bird-name">Грач</span>
+          </div>
+          <div class="answer-section_bird">
+            <span class="answer-section__point"></span>
+            <span class="answer-section_bird-name">Галка</span>
+          </div>
+          <div class="answer-section_bird">
+            <span class="answer-section__point"></span>
+            <span class="answer-section_bird-name">Певчий дрозд</span>
+          </div>
+          <div class="answer-section_bird">
+            <span class="answer-section__point"></span>
+            <span class="answer-section_bird-name">Сорока</span>
+          </div>
+          <div class="answer-section_bird">
+            <span class="answer-section__point"></span>
+            <span class="answer-section_bird-name">Сойка</span>
+          </div> -->
+        </div>
+        <div class="answer-section__bird-info">
+          <!-- <div class="answer-section__bird-img"></div>
+          <div class="answer-section__bird-name">Грач</div>
+          <div class="answer-section__bird-latin">Corvus frugilegus</div>
+          <audio src="#" class="custom-audio-option" controls></audio> -->
+          Послушайте плеер. 
+          <br/>
+          Выберите птицу из списка.
+        </div>
+      </div>
+    </section>
+    <section class="buttin-section">
+      <button class="button-section__button">Следующий уровень</button>
+    </section>
+    <footer class="footer">
+        <a href="https://github.com/TheExtraOne" class="footer__git" target="_blank">&#169; 2022 GitHub. All rights reserved.</a>
+        <a class="footer__referen" target="_blank" href="https://rs.school/js/">
+          <img src="../assets/icons/rs_school_js.svg" alt="The Rolling Scopes School" class="footer__logo-school">
+        </a>
+      </footer>
+      <script src="../script.js"></script>
+      <script src="../translation/quiz-tran.js"></script>
+      <script src="../scripts/player.js"></script>
+      <script src="../scripts/quiz.js" type="module"></script>
+      </body>
+  </html>

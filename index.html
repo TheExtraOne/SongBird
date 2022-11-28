@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>SongBird</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		<meta name="HandheldFriendly" content="True"><!--В некоторых случаях смартфоны автоматически изменяют масштаб страницы, лучше эту возможность отключать-->
+		<!-- saved from url=(0014)about:internet -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--Чтобы переключить Internet Explorer в режим последней версии --> 
+		<meta http-equiv="cleartype" content="on"><!--Для включения сглаживания шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" 
+      rel="stylesheet">
+    <link rel="icon" href="assets/icons/favicon.ico">
+		<link rel="stylesheet" href="styles.css"> <!--CSS для данной страницы-->
+	</head>
+	<body class="body">
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo">
+          <span class="header__logo-frase">Song</span><span class="header__logo-frase header__logo-frase_green">bird</span>
+        </a>
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="index.html" class="header__nav-link header__nav-link_active header__nav-link_header-main">Главная</a></li>
+          <li class="header__nav-item"><a href="pages/quizz.html" class="header__nav-link header__nav-link_header-quiz">Викторина</a></li>
+          <li class="header__nav-item"><a href="pages/gallery.html" class="header__nav-link header__nav-link_header-gal">Галерея</a></li>
+        </ul>
+        <div class="header__languages">
+          <span class="header__language header__language_active Ru">Ru </span> /
+          <span class="header__language Eng"> Eng</span>
+        </div>
+        <img src="assets/icons/burger_menu.svg" alt="burger menu" class="header__burger-menu">
+      </div>
+    </header>
+    <section class="popup popup_invis">
+      <div class="popup__content">
+        <ul class="popup__nav-list">
+          <li class="popup-item"><a href="#" class="popup__link popup__link_active header__nav-link_pop-main">Главная</a></li>
+          <li class="popup-item"><a href="pages/quizz.html" class="popup__link header__nav-link_pop-quiz">Викторина</a></li>
+          <li class="popup-item"><a href="pages/gallery.html" class="popup__link header__nav-link_pop-gal">Галерея</a></li>
+          <li class="popup-item">
+            <span class="header__language header__language_active Ru">Ru </span> /
+            <span class="header__language Eng"> Eng</span>
+          </li>
+        </ul>
+        <span class="popup__close">X</span>
+      </div>
+    </section>
+    <section class="main-banner">
+      <h1 class="main-banner__text-container">Помоги <br/>природе <br/>в один клик</h1>
+      <div class="button">
+        <div class="button__text"><a href="https://sirin.by" target="_blank" class="button__link main-banner__button-link">Читать дальше...</a></div>
+        <div class="button__wrapper">
+          <div class="button__arrow"></div>
+          <div class="button__border-circle"></div>
+          <div class="button__mask-circle">
+            <div class="button__small-circle"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="about__container">
+        <h3 class="about__title">О нас</h3>
+        <p class="about__text about__text-first">Мы некоммерческая организация, главная цель которой &mdash; помогать диким птицам. Создавая викторины и публикуя фото, сделанные волонтерами, мы стараемся привлекать общественное внимание к таким близким, но незнакомым пернатым.</p>
+        <p class="about__text about__text-sec">Мы не принимаем пожертвования напрямую, но перенаправляем вас на страницы организаций, где вы можете пожертвовать птицам вашей страны.</p>
+        <ul class="about__list">
+          <li class="about__item"><a href="https://www.facebook.com" target="_blank"><img src="assets/icons/facebook.svg" alt="facebook"></a></li>
+          <li class="about__item"><a href="https://www.instagram.com" target="_blank"><img src="assets/icons/insta.svg" alt="instagram"></a></li>
+          <li class="about__item"><a href="https://twitter.com" target="_blank"><img src="assets/icons/twitter.svg" alt="twiter"></a></li>
+          <li class="about__item"><a href="https://www.youtube.com" target="_blank"><img src="assets/icons/yout.svg" alt="youtube"></a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="quizz">
+      <!-- <div class="quizz__button-wrapper">
+        <div class="quizz__button">
+          <span><a href="#" class="quizz__link">Пройти викторину</a></span>
+        </div>
+      </div> -->
+      <div class="button">
+        <div class="button__text"><a href="pages/quizz.html" class="button__link quiz__button-link">Пройти викторину...</a></div>
+        <div class="button__wrapper">
+          <div class="button__arrow"></div>
+          <div class="button__border-circle"></div>
+          <div class="button__mask-circle">
+            <div class="button__small-circle"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="partners">
+      <h3 class="partners__title">Наши партнеры</h3>
+      <div class="partners__wrapper">
+        <div class="partner__column">
+          <h5 class="parnter__name parnter__name-1">Сирин</h5>
+          <p class="parter__info parter__info-1">Центр помощи диким животным «Сирин» &mdash; уникальная для Беларуси организация, в которой оказывают помощь диким птицам и зверям. Центр изымает травмированных и ослабленных животных, лечит, реабилитирует и возвращает обратно в природу.</p>
+          <a class="parter__link parter__link-1" href="https://sirin.by" target="_blank">Узнать больше &#8594;</a>
+        </div>
+        <div class="partner__column">
+          <h5 class="parnter__name parnter__name-2">Всемирный фонд дикой природы</h5>
+          <p class="parter__info parter__info-2">Всемирный фонд дикой природы &mdash; российская независимая национальная природоохранная неполитическая организация. Миссия WWF состоит в предотвращении нарастающей деградации естественной среды планеты и достижении гармонии человека и природы.</p>
+          <a class="parter__link parter__link-2" href="https://wwf.ru" target="_blank">Узнать больше &#8594;</a>
+        </div>
+        <div class="partner__column">
+          <h5 class="parnter__name parnter__name-3">Союз Охраны птиц России</h5>
+          <p class="parter__info parter__info-3">Союз Охраны птиц Росии &mdash; объединение орнитологов-любителей, ведущие учет размера стай разных видов птиц по разным областям России. СОПР так же проводит компании по наблюдению, подкормке и поддрежке редких видов пернатых.</p>
+          <a class="parter__link parter__link-3" href="http://rbcu.ru" target="_blank">Узнать больше &#8594;</a>
+        </div>
+        <div class="partner__column">
+          <h5 class="parnter__name parnter__name-4">Украинское общество защиты птиц</h5>
+          <p class="parter__info parter__info-4">Цель общества &mdash; предотвратить уменьшение численности и исчезновение редких видов птиц, поддерживать их разнообразие в природе путем защиты экосисем и уменьшения влияния человека</p>
+          <a class="parter__link parter__link-4" href="https://www.birdlife.org.ua" target="_blank">Узнать больше &#8594;</a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <a href="https://github.com/TheExtraOne" class="footer__git" target="_blank">&#169; 2022 GitHub. All rights reserved.</a>
+      <a class="footer__referen" target="_blank" href="https://rs.school/js/">
+        <img src="assets/icons/rs_school_js.svg" alt="The Rolling Scopes School" class="footer__logo-school">
+      </a>
+    </footer>
+    <script src="script.js"></script>
+    <script src="translation/main-tran.js"></script>
+    </body>
+</html>

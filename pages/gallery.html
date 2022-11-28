@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>SongBird</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		<meta name="HandheldFriendly" content="True"><!--В некоторых случаях смартфоны автоматически изменяют масштаб страницы, лучше эту возможность отключать-->
+		<!-- saved from url=(0014)about:internet -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--Чтобы переключить Internet Explorer в режим последней версии --> 
+		<meta http-equiv="cleartype" content="on"><!--Для включения сглаживания шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" 
+      rel="stylesheet">
+    <link rel="icon" href="../assets/icons/favicon.ico">
+		<link rel="stylesheet" href="../styles/header-footer.css">
+    <link rel="stylesheet" href="../styles/player.css">
+    <link rel="stylesheet" href="../styles/gallery.css">
+	</head>
+	<body class="body">
+    <header class="header">
+      <div class="header__container">
+        <a href="../index.html" class="header__logo">
+          <span class="header__logo-frase">Song</span><span class="header__logo-frase header__logo-frase_green">bird</span>
+        </a>
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="../index.html" class="header__nav-link header__nav-link_header-main">Главная</a></li>
+          <li class="header__nav-item"><a href="quizz.html" class="header__nav-link header__nav-link_header-quiz">Викторина</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link header__nav-link_header-gal header__nav-link_active">Галерея</a></li>
+        </ul>
+        <div class="header__languages">
+          <span class="header__language header__language_active Ru">Ru </span> /
+          <span class="header__language Eng"> Eng</span>
+        </div>
+        <img src="../assets/icons/burger_menu.svg" alt="burger menu" class="header__burger-menu">
+      </div>
+    </header>
+    <section class="popup popup_invis">
+      <div class="popup__content">
+        <ul class="popup__nav-list">
+          <li class="popup-item"><a href="../index.html" class="popup__link header__nav-link_pop-main">Главная</a></li>
+          <li class="popup-item"><a href="quizz.html" class="popup__link header__nav-link_pop-quiz">Викторина</a></li>
+          <li class="popup-item"><a href="#" class="popup__link header__nav-link_pop-gal popup__link_active">Галерея</a></li>
+          <li class="popup-item">
+            <span class="header__language header__language_active Ru">Ru </span> /
+            <span class="header__language Eng"> Eng</span>
+          </li>
+        </ul>
+        <span class="popup__close">X</span>
+      </div>
+    </section>
+    <section class="gallery">
+      <div class="gallery__container">
+        <!-- <div class="gallery__card-container">
+          <div class="gallery__img-container">
+            <img src="https://live.staticflickr.com/65535/47105096764_f751fba568.jpg" alt="Bird" class="gallery__img">
+          </div>
+          <h3 class="gallery__bird-name">Жаворонок</h3>
+          <p class="gallery__bird-name-lat">Alauda arvensis</p>
+          <p class="gallery__bird-info">Жаворонки — перелетные птицы. С начала сентября они отлетают на юг. Возвращаются они в начале марта, независимо от того, сошел снег или нет. По прилету жаворонков определяли наступление весны и пору, когда пора пахать землю.</p>
+          <div class="audio-container">
+            <audio src='https://www.xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC462158-Skowronek_Alauda_arvensis_Poland_Jarek_Matusiak_%20-006%20skowronek%20%282%29.mp3' class="custom-audio"></audio>
+            <div class ="controls">
+              <button class="controls__play">
+                <img src="../assets/icons/play.svg" alt="" class="controls__play-img">
+              </button>
+              <div class="controls__audio-length">
+                <div class="controls__played-time">
+                  <span class="controls__point"></span>
+                </div>
+                <span class="current-time">00:00</span>
+                <span class="duration">00:00</span>
+              </div>
+              <div class="controls__volume">
+                <input type="range" min="0" max="1" value="0.5" step="0.1" class="controls__range controls__range_invis">
+                <img src="../assets/icons/volume.svg" alt="" class="controls__volume-img">
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <footer class="footer">
+      <a href="https://github.com/TheExtraOne" class="footer__git" target="_blank">&#169; 2022 GitHub. All rights reserved.</a>
+      <a class="footer__referen" target="_blank" href="https://rs.school/js/">
+        <img src="../assets/icons/rs_school_js.svg" alt="The Rolling Scopes School" class="footer__logo-school">
+      </a>
+    </footer>
+    <script src="../script.js"></script>
+    <script src="../scripts/gallery.js" type="module"></script>
+    <script src="../translation/gallery-tran.js"></script>
+    </body>
+</html>
